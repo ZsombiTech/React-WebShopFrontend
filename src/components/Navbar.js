@@ -6,11 +6,11 @@ export default function Navbar() {
     <div className="navbar">
       <img src={logo} alt="logo" className="navbarlogo" />
       <div className="navlinks">
-        <a className="navbarlink">Home</a>
-        <a className="navbarlink">About</a>
-        <a className="navbarlink">Products</a>
-        <a className="navbarlink">Contact</a>
-        <a className="navbarsignuplink">Sign Up</a>
+        <a className="navbarlink">Főoldal</a>
+        <a className="navbarlink">Rólunk</a>
+        <a className="navbarlink">Termékek</a>
+        <a className="navbarlink">Kapcsolat</a>
+        <a className="navbarsignuplink">Regisztráció</a>
       </div>
     </div>
   );
