@@ -15,4 +15,5 @@
 .productlist {
   display: flex;
   flex-direction: row;
+  margin-bottom: 3vw;
 }
