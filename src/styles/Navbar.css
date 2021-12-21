@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(57, 57, 226);
+  margin-top: -1vw;
+  margin-left: -1vw;
+  margin-right: -1vw;
+  height: 5vw;
+}
+.navbarlogo {
+  width: 13vw;
+  height: 10vw;
+  margin-top: -1.2vw;
+}
+.navlinks {
+  font-family: "Roboto", sans-serif;
+  font-size: 1vw;
+  color: white;
+  margin-left: auto;
+  text-transform: uppercase;
+  margin-top: 3.5vw;
+}
+.navbarlink:hover {
+  color: rgb(0, 31, 133);
+}
+.navbarlink {
+  margin-right: 5vw;
+}
+
+.navbarsignuplink {
+  background-color: rgb(12, 63, 158);
+  padding: 1vw;
+  margin-right: 5vw;
+  border-radius: 2vw;
+}
+
+.navbarsignuplink:hover {
+  background-color: rgb(14, 89, 230);
+}

@@ -1,0 +1,26 @@
+.homemaincomponent {
+  display: flex;
+  align-items: center;
+}
+
+.homefishingimage {
+  margin-left: 7vw;
+  margin-top: 5vw;
+  height: 35vw;
+}
+
+.homemaintexts {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  margin-left: 10vw;
+}
+
+.homebigtext {
+  font-size: 3vw;
+}
+
+.homealttext {
+  font-size: 1.5vw;
+}
