@@ -1,0 +1,19 @@
+.oneline2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.contactcolumn1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactcolumn2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactmaintext {
+  text-align: center;
+  font-size: 2vw;
+}
