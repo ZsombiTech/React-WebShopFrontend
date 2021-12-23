@@ -1,38 +1,120 @@
-import React, { Fragment } from "react";
-import "../styles/Contact.css";
+import React from "react";
+import "tailwindcss/tailwind.css";
 
-export default function Contact() {
+export default function App() {
   return (
-    <Fragment>
-      <div className="contactbackground">
-        <h1 className="contactmaintext">Kapcsolat</h1>
-        <div className="oneline2">
-          <div className="contactcolumn1">
-            <h1 className="contactcolumn1maintext">Kapcsolat</h1>
-            <p className="contactcolumn1smalltext">Asefish</p>
-            <p className="contactcolumn1smalltext">xyz@gmail.com</p>
-            <div className="oneline">
-              <p className="contactcolumn1smalltext">06777777777</p>
+    <div className="bg-gray-100 mt-16" id="coolcontact">
+      <section className="text-gray-700 body-font relative">
+        <div className="container px-5 py-24 mx-auto">
+          <div className="flex flex-col text-center w-full mb-12">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+              Kapcsolat
+            </h1>
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+              Ügyfélszolgálatunk hétköznaponként 9-17 óráig érhető el
+            </p>
+          </div>
+          <div className="lg:w-1/2 md:w-2/3 mx-auto">
+            <div className="flex flex-wrap -m-2">
+              <div className="p-2 w-1/2">
+                <div className="relative">
+                  <label for="name" className="leading-7 text-sm text-gray-600">
+                    Név
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  />
+                </div>
+              </div>
+              <div className="p-2 w-1/2">
+                <div className="relative">
+                  <label
+                    for="email"
+                    className="leading-7 text-sm text-gray-600"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  />
+                </div>
+              </div>
+              <div className="p-2 w-full">
+                <div className="relative">
+                  <label
+                    for="message"
+                    className="leading-7 text-sm text-gray-600"
+                  >
+                    Üzenet
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                  ></textarea>
+                </div>
+              </div>
+              <div className="p-2 w-full">
+                <button className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                  Küldés
+                </button>
+              </div>
+              <div className="p-2 w-full pt-8 mt-7 border-t border-gray-200 text-center">
+                <a className="text-indigo-500">asefish@email.com</a>
+                <p className="leading-normal my-5">
+                  1082, Baross utca 11.
+                  <br />
+                  Budapest
+                </p>
+                <span className="inline-flex">
+                  <a className="text-gray-500" href="https://www.facebook.com/">
+                    <svg
+                      fill="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      className="w-5 h-5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a
+                    className="ml-4 text-gray-500"
+                    href="https://www.instagram.com/"
+                  >
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      className="w-5 h-5"
+                      viewBox="0 0 24 24"
+                    >
+                      <rect
+                        width="20"
+                        height="20"
+                        x="2"
+                        y="2"
+                        rx="5"
+                        ry="5"
+                      ></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
-          <div className="contactcolumn2">
-            <h1 className="contactcolumn2maintext">Kérdésed van?</h1>
-            <p className="contactcolumn2smalltext">
-              Telefonos és írásos ügyfélszolgálatunk munkanapokon 9 és 17 óra
-              között érhető el.
-            </p>
-            <label className="contactformlabel">Név *</label>
-            <input type="text" id="contactforminput" />
-            <label className="contactformlabel">Email *</label>
-            <input type="email" id="contactforminput" />
-            <label className="contactformlabel">Telefonszám *</label>
-            <input type="number" id="contactforminput" />
-            <label className="contactformlabel">Üzenet *</label>
-            <input type="text" id="contactforminput" />
-            <input type="submit" id="contactsubmitform" />
-          </div>
         </div>
-      </div>
-    </Fragment>
+      </section>
+    </div>
   );
 }
