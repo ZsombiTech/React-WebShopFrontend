@@ -7,18 +7,35 @@ import Contact from "./components/Contact";
 import ProductOverview from "./components/ProductOverview";
 import Login from "./components/Login";
 import Registration from "./components/Registration";
+import ProductList from "./components/ProductList";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Main />
-      <Categories />
-      <Products />
-      <Contact />
-      {/*<ProductOverview />
-      <Login />
-      <Registration />*/}
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <Main />
+            <Categories />
+            <Products />
+            <Contact />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/registration">
+            <Registration />
+          </Route>
+          <Route path="/productoverview">
+            <ProductOverview />
+          </Route>
+          <Route path="/productlist">
+            <ProductList />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

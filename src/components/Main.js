@@ -13,12 +13,12 @@ export default function Landing() {
                   horgászáruháza
                 </span>
               </h1>
-              <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+              <p className="mt-3 mb-10 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 Országszerte kiszállítunk mindenféle horgászathoz és halászathoz
                 kötődő termékeket. Vásárlóink teljes mértékben meg vannak velünk
                 elégedve.
               </p>
-              <div className="mt-3 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+              <div className="mt-15 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
                   <a
                     href="#coolkategoria"
