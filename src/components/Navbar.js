@@ -11,8 +11,11 @@ const navigation = {
   ],
 };
 
-export default function Navbar() {
+export default function Navbar(props) {
   const [open, setOpen] = useState(false);
+  const shoppingcarthandler = () => {
+    props.setopencart(true);
+  };
 
   return (
     <div className="bg-white">
@@ -115,9 +118,11 @@ export default function Navbar() {
 
             {/* Logo */}
             <div className="ml-4 flex lg:ml-11 mr-10">
-              <a href="#">
-                <img className="h-11 w-auto" src={logo} alt="" />
-              </a>
+              <Link to="/">
+                <a href="#">
+                  <img className="h-11 w-auto" src={logo} alt="" />
+                </a>
+              </Link>
             </div>
 
             {/* Flyout menus */}
@@ -159,7 +164,11 @@ export default function Navbar() {
 
               {/* Cart */}
               <div className="ml-4 flow-root lg:mr-11">
-                <a href="#" className="group -m-2 p-2 flex items-center">
+                <a
+                  href="#"
+                  className="group -m-2 p-2 flex items-center"
+                  onClick={shoppingcarthandler}
+                >
                   <ShoppingBagIcon
                     className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
                     aria-hidden="true"

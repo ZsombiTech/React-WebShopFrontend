@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Products from "./components/Products";
@@ -12,16 +13,19 @@ import ShoppingCart from "./components/ShoppingCart";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
+  const [opencart, setopencart] = useState(false);
   return (
     <div>
       <Router>
-        <Navbar />
+        <Navbar opencart={opencart} setopencart={setopencart} />
+
         <Switch>
           <Route exact path="/">
             <Main />
             <Categories />
             <Products />
             <Contact />
+            <ShoppingCart opencart={opencart} setopencart={setopencart} />
           </Route>
           <Route path="/login">
             <Login />
@@ -31,12 +35,11 @@ function App() {
           </Route>
           <Route path="/productoverview">
             <ProductOverview />
+            <ShoppingCart opencart={opencart} setopencart={setopencart} />
           </Route>
           <Route path="/productlist">
             <ProductList />
-          </Route>
-          <Route path="/shoppingcart">
-            <ShoppingCart />
+            <ShoppingCart opencart={opencart} setopencart={setopencart} />
           </Route>
         </Switch>
       </Router>
