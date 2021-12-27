@@ -2,6 +2,7 @@ import horgaszbot from "../images/horgaszbit.jpg";
 import csali from "../images/csali.jpg";
 import horog from "../images/horog.jpg";
 import szek from "../images/szek.jpeg";
+import { Link } from "react-router-dom";
 
 const callouts = [
   {
@@ -41,18 +42,20 @@ export default function Categories() {
 
           <div className="mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-x-6">
             {callouts.map((callout) => (
-              <div key={callout.description} className="group relative">
-                <div className="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                  <img
-                    src={callout.imageSrc}
-                    alt={callout.imageAlt}
-                    className="w-full h-full object-center object-cover"
-                  />
+              <Link to="/productlist">
+                <div key={callout.description} className="group relative">
+                  <div className="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                    <img
+                      src={callout.imageSrc}
+                      alt={callout.imageAlt}
+                      className="w-full h-full object-center object-cover"
+                    />
+                  </div>
+                  <p className="text-center font-semibold text-gray-900 mt-20">
+                    {callout.description}
+                  </p>
                 </div>
-                <p className="text-center font-semibold text-gray-900 mt-20">
-                  {callout.description}
-                </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

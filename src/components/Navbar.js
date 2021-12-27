@@ -2,11 +2,12 @@ import { Fragment, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import { MenuIcon, ShoppingBagIcon, XIcon } from "@heroicons/react/outline";
 import logo from "../images/logo.png";
+import { Link } from "react-router-dom";
 const navigation = {
   pages: [
-    { name: "Kategóriák", href: "#coolkategoria" },
-    { name: "Akciók", href: "#coolproduct" },
-    { name: "Kapcsolat", href: "#coolcontact" },
+    { name: "Kategóriák", href: "/#coolkategoria" },
+    { name: "Akciók", href: "/#coolproduct" },
+    { name: "Kapcsolat", href: "/#coolcontact" },
   ],
 };
 
@@ -70,12 +71,14 @@ export default function Navbar() {
 
               <div className="border-t border-gray-200 py-6 px-4 space-y-6">
                 <div className="flow-root">
-                  <a
-                    href="#"
-                    className="-m-2 p-2 block font-medium text-gray-900"
-                  >
-                    Bejelentkezés
-                  </a>
+                  <Link to="/login">
+                    <a
+                      href="#"
+                      className="-m-2 p-2 block font-medium text-gray-900"
+                    >
+                      Bejelentkezés
+                    </a>
+                  </Link>
                 </div>
                 <div className="flow-root">
                   <a
@@ -134,19 +137,24 @@ export default function Navbar() {
 
             <div className="ml-auto flex items-center">
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                <a
-                  href="#"
-                  className="text-sm font-medium text-gray-700 hover:text-gray-800"
-                >
-                  Bejelentkezés
-                </a>
+                <Link to="/login">
+                  <a
+                    href="#"
+                    className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                  >
+                    Bejelentkezés
+                  </a>
+                </Link>
+
                 <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                <a
-                  href="#"
-                  className="text-sm font-medium text-gray-700 hover:text-gray-800"
-                >
-                  Regisztráció
-                </a>
+                <Link to="/registration">
+                  <a
+                    href="#"
+                    className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                  >
+                    Regisztráció
+                  </a>
+                </Link>
               </div>
 
               {/* Cart */}

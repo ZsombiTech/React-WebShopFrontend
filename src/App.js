@@ -8,6 +8,7 @@ import ProductOverview from "./components/ProductOverview";
 import Login from "./components/Login";
 import Registration from "./components/Registration";
 import ProductList from "./components/ProductList";
+import ShoppingCart from "./components/ShoppingCart";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route path="/productlist">
             <ProductList />
+          </Route>
+          <Route path="/shoppingcart">
+            <ShoppingCart />
           </Route>
         </Switch>
       </Router>

@@ -1,4 +1,5 @@
 import bot from "../images/bot.webp";
+import { Link } from "react-router-dom";
 const products = [
   {
     id: 1,
@@ -71,33 +72,35 @@ export default function Products() {
 
       <div className="ml-5 flex-col mt-6 flex lg:flex-row lg:ml-13 ">
         {products.map((product) => (
-          <div key={product.id} className="group relative mr-13 sm:flex-col">
-            <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-              <img
-                src={product.imageSrc}
-                alt={product.imageAlt}
-                className="w-full h-full object-center object-cover lg:w-full lg:h-full"
-              />
-            </div>
-            <div className="mt-4 flex justify-between">
-              <div>
-                <h3 className="text-sm text-gray-700">
-                  <a href={product.href}>
-                    <span aria-hidden="true" className="absolute inset-0" />
-                    {product.name}
-                  </a>
-                </h3>
-                <div className="flex">
-                  <p className="text-sm font-medium text-gray-900 line-through mr-18">
-                    {product.price}
-                  </p>
-                  <p className="text-sm font-medium text-red-600 ">
-                    {product.newprice}
-                  </p>
+          <Link to="/productoverview">
+            <div key={product.id} className="group relative mr-13 sm:flex-col">
+              <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                <img
+                  src={product.imageSrc}
+                  alt={product.imageAlt}
+                  className="w-full h-full object-center object-cover lg:w-full lg:h-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-between">
+                <div>
+                  <h3 className="text-sm text-gray-700">
+                    <a href={product.href}>
+                      <span aria-hidden="true" className="absolute inset-0" />
+                      {product.name}
+                    </a>
+                  </h3>
+                  <div className="flex">
+                    <p className="text-sm font-medium text-gray-900 line-through mr-18">
+                      {product.price}
+                    </p>
+                    <p className="text-sm font-medium text-red-600 ">
+                      {product.newprice}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
