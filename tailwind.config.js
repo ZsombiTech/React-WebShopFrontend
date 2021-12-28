@@ -27,6 +27,7 @@ module.exports = {
         18: "0.5vw",
         19: "5vw",
         20: "1vw",
+        21: "-0.6vw",
       },
       padding: {
         33: "9vw",

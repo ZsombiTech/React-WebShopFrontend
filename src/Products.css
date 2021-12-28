@@ -1,0 +1,132 @@
+body {
+  font-family: sans-serif;
+}
+
+.carousel .slidesContainer {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel .slidesContainer .slideIndicator {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel .slidesContainer .slideIndicator .dot {
+  width: 10px;
+  height: 10px;
+  background: white;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel .slidesContainer .slideIndicator .dot.active {
+  background: black;
+}
+
+.carousel .slidesContainer .scrollLeft,
+.carousel .slidesContainer .scrollRight {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  z-index: 10;
+  font-size: 0.7em;
+}
+
+.carousel .slidesContainer .scrollLeft.disabled,
+.carousel .slidesContainer .scrollRight.disabled {
+  opacity: 0.3;
+}
+
+.carousel .slidesContainer .scrollLeft {
+  left: 8px;
+}
+
+.carousel .slidesContainer .scrollRight {
+  right: 8px;
+}
+
+.carousel .slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.transition {
+  transition: ease all 0.5s;
+}
+
+.carousel .slides .slide {
+  background: #dadada;
+  display: flex;
+  position: relative;
+}
+
+.carousel .slides .slide .slideInner {
+  background: #dadada;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.carousel .slides .slide .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  font-size: 0.7em;
+  padding: 6px;
+}
+
+.customSlide {
+  flex-direction: row;
+  background: rgb(2, 0, 36);
+  background: -webkit-linear-gradient(
+    left,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(38, 38, 173, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    left,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(38, 38, 173, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(38, 38, 173, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(38, 38, 173, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+}
+
+.withImage img {
+  height: 100%;
+  width: 100%;
+}

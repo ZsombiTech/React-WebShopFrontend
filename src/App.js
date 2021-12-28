@@ -11,6 +11,8 @@ import Registration from "./components/Registration";
 import ProductList from "./components/ProductList";
 import ShoppingCart from "./components/ShoppingCart";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import CheckoutForm from "./components/CheckoutForm";
+import PayDeliver from "./components/PayDeliver";
 
 function App() {
   const [opencart, setopencart] = useState(false);
@@ -40,6 +42,12 @@ function App() {
           <Route path="/productlist">
             <ProductList />
             <ShoppingCart opencart={opencart} setopencart={setopencart} />
+          </Route>
+          <Route path="/checkoutform">
+            <CheckoutForm />
+          </Route>
+          <Route path="/paydeliver">
+            <PayDeliver />
           </Route>
         </Switch>
       </Router>

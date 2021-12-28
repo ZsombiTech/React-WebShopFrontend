@@ -2,8 +2,8 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/outline";
 import horog from "../images/horog.jpg";
-
-const products = [
+import { Link } from "react-router-dom";
+let products = [
   {
     id: 1,
     name: "Fasza Bot",
@@ -130,12 +130,14 @@ export default function ShoppingCart(props) {
                       A szállítási díj a megrendelésnél lesz kiszámolva.
                     </p>
                     <div className="mt-6">
-                      <a
-                        href="#"
-                        className="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-                      >
-                        Megrendelés
-                      </a>
+                      <Link to="/checkoutform">
+                        <a
+                          href="#"
+                          className="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                        >
+                          Megrendelés
+                        </a>
+                      </Link>
                     </div>
                     <div className="mt-6 flex justify-center text-sm text-center text-gray-500">
                       <p>
