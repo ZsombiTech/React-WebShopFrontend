@@ -13,6 +13,8 @@ import ShoppingCart from "./components/ShoppingCart";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CheckoutForm from "./components/CheckoutForm";
 import PayDeliver from "./components/PayDeliver";
+import ForgetPassword from "./components/ForgetPassword";
+import Profile from "./components/Profile";
 
 function App() {
   const [opencart, setopencart] = useState(false);
@@ -48,6 +50,12 @@ function App() {
           </Route>
           <Route path="/paydeliver">
             <PayDeliver />
+          </Route>
+          <Route path="/forgetpassword">
+            <ForgetPassword />
+          </Route>
+          <Route path="/profile">
+            <Profile />
           </Route>
         </Switch>
       </Router>

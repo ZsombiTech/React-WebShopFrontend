@@ -57,7 +57,7 @@ export default function PayDeliver() {
                       htmlFor="comments"
                       className="font-medium text-gray-700"
                     >
-                      A szállítási cím megegyezik a lakhellyel
+                      A szállítási cím megegyezik a számlázási címmel
                     </label>
                   </div>
                   <input

@@ -1,5 +1,6 @@
 import { LockClosedIcon } from "@heroicons/react/solid";
 import logo from "../images/logo.png";
+import { Link } from "react-router-dom";
 export default function Login() {
   return (
     <>
@@ -61,12 +62,14 @@ export default function Login() {
               </div>
 
               <div className="text-sm">
-                <a
-                  href="#"
-                  className="font-medium text-indigo-600 hover:text-indigo-500"
-                >
-                  Elfelejtette a jelszavát?
-                </a>
+                <Link to="/forgetpassword">
+                  <a
+                    href="#"
+                    className="font-medium text-indigo-600 hover:text-indigo-500"
+                  >
+                    Elfelejtette a jelszavát?
+                  </a>
+                </Link>
               </div>
             </div>
 

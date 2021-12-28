@@ -99,7 +99,7 @@ export default function Navbar(props) {
 
       <header className="relative bg-white">
         <p className="bg-indigo-600 h-10 flex items-center justify-center text-sm font-medium text-white px-4 sm:px-6 lg:px-8">
-          50 ezer forintos rendelés fölött ingyenes kiszállítás
+          INGYENES SZÁLLÍTÁS 15.000 FT FELETT!
         </p>
 
         <nav

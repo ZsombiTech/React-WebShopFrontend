@@ -6,7 +6,7 @@ export default function CheckoutForm() {
     <div className="mt-10 sm:mt-0 m-14">
       <div className="mt-10">
         <h1 className="text-2xl font-extrabold tracking-tight text-gray-900 text-center mb-10">
-          Adatok
+          Számlázási Adatok
         </h1>
       </div>
       <div className="mt-5 md:mt-0 md:col-span-2">
