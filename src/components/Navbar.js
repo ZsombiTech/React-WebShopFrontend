@@ -72,7 +72,7 @@ export default function Navbar(props) {
                 ))}
               </div>
 
-              <div className="border-t border-gray-200 py-6 px-4 space-y-6">
+              <div className="ml-10 border-t border-gray-200 py-6 px-4 space-y-6">
                 <div className="flow-root">
                   <Link to="/login">
                     <a
@@ -140,7 +140,7 @@ export default function Navbar(props) {
               </div>
             </Popover.Group>
 
-            <div className="ml-auto flex items-center">
+            <div className="ml-auto mr-14 flex items-center">
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                 <Link to="/login">
                   <a
